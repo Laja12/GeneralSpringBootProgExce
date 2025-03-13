@@ -14,11 +14,11 @@ jobs:
        java-version: '17'
        distribution: 'microsoft'
    - run: mvn --batch-mode --update-snapshots verify
-   - run: mkdir staging && cp target/*.jar staging
+   - run: mkdir mahesh && cp target/*.jar mahesh
    - name: Upload a Build Artifact
      uses: actions/upload-artifact@v4.6.1
      with:
        name: Package
-       path: staging
+       path: mahesh
       
   
